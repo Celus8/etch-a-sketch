@@ -13,6 +13,13 @@ function createGrid(dim) {
     }
 
     let gridDivs = document.querySelectorAll("#canvas div div")
+
+    let size = 640 / dim;
+
+    gridDivs.forEach((currentValue) => {
+        currentValue.style.cssText = `width: ${size}px; height: ${size}px;`;
+    })
+
     gridDivs.forEach((currentValue) => {
         currentValue.addEventListener("mouseenter", () => {
         currentValue.style.backgroundColor = "black";
