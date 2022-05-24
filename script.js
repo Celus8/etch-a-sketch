@@ -1,7 +1,8 @@
 let canvas = document.querySelector("#canvas");
 
 function createGrid(dim) {
-    let rowDiv;
+    
+    canvas.innerHTML = "";
     
     for (let i = 0; i < dim; i++) {
         rowDiv = document.createElement("div")
@@ -10,13 +11,22 @@ function createGrid(dim) {
             rowDiv.appendChild(document.createElement("div"));
         }
     }
+
+    let gridDivs = document.querySelectorAll("#canvas div div")
+    gridDivs.forEach((currentValue) => {
+        currentValue.addEventListener("mouseenter", () => {
+        currentValue.style.backgroundColor = "black";
+    })});
+
 }
 
 createGrid(16);
 
-let gridDivs = document.querySelectorAll("#canvas div div")
+let newGrid = document.querySelector("#newGrid");
 
-gridDivs.forEach((currentValue) => {
-    currentValue.addEventListener("mouseenter", () => {
-    currentValue.style.backgroundColor = "black";
-})});
+newGrid.addEventListener("click", () => {
+    let dim = prompt("What size should it have?");
+    createGrid(dim);
+    let gridDivs = document.querySelectorAll("#canvas div div")
+});
+
