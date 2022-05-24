@@ -39,6 +39,5 @@ let newGrid = document.querySelector("#newGrid");
 newGrid.addEventListener("click", () => {
     let dim = prompt("What size should it have?");
     createGrid(dim);
-    let gridDivs = document.querySelectorAll("#canvas div div")
 });
 
