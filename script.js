@@ -14,4 +14,9 @@ function createGrid(dim) {
 
 createGrid(16);
 
-let gridDivs = document.querySelectorAll("#canvas div")
+let gridDivs = document.querySelectorAll("#canvas div div")
+
+gridDivs.forEach((currentValue) => {
+    currentValue.addEventListener("mouseenter", () => {
+    currentValue.style.backgroundColor = "black";
+})});

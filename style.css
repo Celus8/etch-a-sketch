@@ -7,16 +7,11 @@ body {
 #canvas {
     display: flex;
     flex-direction: row;
-    flex
+    border: solid black 1px;
 }
 
-#canvas div {
-}
-
-#canvas div div{
+#canvas div div {
     width: 20px;
     height: 20px;
-    background-color: aqua;
-    border: solid black 1px;
     flex-shrink: 0;
 }
